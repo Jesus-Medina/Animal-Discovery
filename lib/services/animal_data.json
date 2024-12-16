@@ -3,43 +3,57 @@
     "title": "Pájaro",
     "description": "Los pájaros son los únicos animales con plumas, ¡y algunas especies pueden volar a más de 100 km/h! Además, usan sus cantos para hablar entre ellos o para llamar la atención de otros pájaros.",
     "image": "assets/images/pajaro.png",
-    "species": "37"
+    "image2": "assets/images/pajaro2.png",
+    "species": "14.000"
   },
   {
     "title": "Perro",
     "description": "Los perros tienen un súper olfato, ¡pueden oler hasta 100.000 veces mejor que los humanos! Por eso, muchas veces ayudan a encontrar cosas o personas.",
-    "image": "assets/images/pajaro.png",
-    "species": "37"
+    "image": "assets/images/perro.png",
+    "image2": "assets/images/perro2.png",
+    "species": "350"
   },
   {
     "title": "Gato",
     "description": "Los gatos pasan la mitad de su día durmiendo y son muy ágiles porque tienen un esqueleto flexible. Pueden saltar hasta seis veces su altura.",
-    "image": "assets/images/pajaro.png",
-    "species": "37"
+    "image": "assets/images/gato.png",
+    "image2": "assets/images/gato2.png",
+    "species": "41"
   },
   {
     "title": "Gallo",
     "description": "Los gallos cantan para marcar su territorio y avisar a otros que están ahí. Su canto puede escucharse desde muy lejos, ¡incluso a 1 km de distancia!",
-    "image": "assets/images/pajaro.png",
-    "species": "37"
+    "image": "assets/images/gallo.png",
+    "image2": "assets/images/gallo2.png",
+    "species": "1.600"
   },
   {
     "title": "Vaca",
     "description": "Las vacas tienen cuatro estómagos que les ayudan a digerir el pasto. También tienen muy buena memoria, recuerdan caras y lugares por mucho tiempo.",
-    "image": "assets/images/pajaro.png",
-    "species": "37"
+    "image": "assets/images/vaca.png",
+    "image2": "assets/images/vaca2.png",
+    "species": "900"
   },
   {
     "title": "Caballo",
     "description": "Los caballos pueden dormir de pie gracias a sus patas fuertes, y tienen una excelente memoria. Pueden reconocer amigos humanos después de muchos años.",
-    "image": "assets/images/pajaro.png",
-    "species": "37"
+    "image": "assets/images/caballo.png",
+    "image2": "assets/images/caballo2.png",
+    "species": "400"
   },
   {
     "title": "León",
     "description": "Los leones son conocidos como los \"reyes de la selva\" y su rugido puede escucharse hasta a 8 kilómetros. Las hembras son las que cazan para alimentar a toda la familia.",
-    "image": "assets/images/pajaro.png",
-    "species": "37"
+    "image": "assets/images/leon.png",
+    "image2": "assets/images/leon2.png",
+    "species": "2"
+  },
+  {
+    "title": "test",
+    "description": "test",
+    "image": "assets/images/leon.png",
+    "image2": "assets/images/leon2.png",
+    "species": "test"
   }
 ]
 

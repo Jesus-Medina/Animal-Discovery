@@ -37,6 +37,13 @@ class AnimalCard extends StatelessWidget {
                 ),
               ),
               Positioned(
+                top: 10,
+                right: -30,
+                width: 100,
+                height: 100,
+                child: Image.asset("assets/images/planta3.png"),
+              ),
+              Positioned(
                 right: -30,
                 bottom: -2,
                 width: 200,
@@ -58,27 +65,38 @@ class AnimalCard extends StatelessWidget {
               ),
               Positioned(
                 right: -35,
-                bottom: 10,
+                bottom: 15,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => DetailScreen(animal: animal),
-                      ),
-                    );
+                    /*
+                    aqui deberia ir la logica del reproductor de sonidos
+                  */
                   },
                   style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(60, 60),
+                    minimumSize: const Size(70, 70),
                     shape: const CircleBorder(),
                     iconColor: Colors.white,
-                    backgroundColor: Colors.blue[600],
+                    backgroundColor: Color(orange),
                   ),
                   child: const Icon(
                     Icons.play_arrow,
                     size: 30,
                   ),
                 ),
+              ),
+              Positioned(
+                left: 10,
+                bottom: -24,
+                width: 80,
+                height: 80,
+                child: Image.asset("assets/images/planta2.png"),
+              ),
+              Positioned(
+                left: -20,
+                bottom: -8,
+                width: 80,
+                height: 80,
+                child: Image.asset("assets/images/planta1.png"),
               ),
             ],
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/details_screen/details_screen_component/icon_toggle_button.dart';
 import 'package:flutter_application_1/services/animal_service.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
-      children: [
+      children: <Widget>[
         Positioned(
             top: 0,
             left: 0,
@@ -67,12 +68,41 @@ class DetailScreen extends StatelessWidget {
                       const BorderRadius.only(topLeft: Radius.circular(35))),
             )),
         Positioned(
+          top: 195,
+          right: 0,
+          height: 320,
+          width: MediaQuery.of(context).size.width * 0.9,
+          child: Container(
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(35)),
+            ),
+            child: Align(
+              alignment: Alignment.bottomCenter, // Imagen al final, abajo
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    bottom: 0), // Espaciado abajo para evitar recorte
+                child: Image.asset(
+                  animal.image2,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+        ),
+        Positioned(
             top: 510,
             left: 0,
             child: Row(
               children: [
                 Container(
-                  color: Color(green),
+                  decoration: BoxDecoration(
+                      color: Color(green),
+                      boxShadow: const [
+                        BoxShadow(
+                            offset: Offset(10, 10),
+                            blurRadius: 10,
+                            spreadRadius: 3)
+                      ]),
                   width: MediaQuery.of(context).size.width,
                   height: 200,
                   child: Center(
@@ -86,7 +116,7 @@ class DetailScreen extends StatelessWidget {
                           fontSize: 15),
                     ),
                   )),
-                )
+                ),
               ],
             )),
         Positioned(
@@ -99,18 +129,7 @@ class DetailScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(lightGreen),
-                          foregroundColor: Colors.white,
-                          minimumSize: const Size(40, 70),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20))),
-                      child: const Icon(
-                        Icons.favorite_border,
-                        size: 35,
-                      )),
+                  const IconToggleButton(),
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -126,12 +145,12 @@ class DetailScreen extends StatelessWidget {
                 ],
               ),
             )),
-        Positioned(
-            top: 140,
+        /*Positioned(
+            top: 160,
             left: 40,
-            width: 400,
-            height: 400,
-            child: Image.asset("assets/images/gato2.png")),
+            width: 350,
+            height: 350,
+            child: Image.asset(animal.image2)),*/
         Positioned(
             top: 130,
             left: 30,
@@ -145,7 +164,7 @@ class DetailScreen extends StatelessWidget {
                   fontWeight: FontWeight.w900),
             )),
         Positioned(
-            top: 455,
+            top: 430,
             left: 28,
             width: 200,
             height: 100,
@@ -157,7 +176,7 @@ class DetailScreen extends StatelessWidget {
                   fontWeight: FontWeight.w900),
             )),
         const Positioned(
-            top: 505,
+            top: 480,
             left: 25,
             width: 200,
             height: 100,

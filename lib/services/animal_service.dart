@@ -5,12 +5,14 @@ class Animal {
   final String title;
   final String description;
   final String image;
+  final String image2;
   final String species;
 
   Animal(
       {required this.title,
       required this.description,
       required this.image,
+      required this.image2,
       required this.species});
 
   factory Animal.fromJson(Map<String, dynamic> json) {
@@ -18,6 +20,7 @@ class Animal {
         title: json['title'],
         description: json['description'],
         image: json['image'],
+        image2: json['image2'],
         species: json['species']);
   }
 }

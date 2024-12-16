@@ -28,19 +28,19 @@ class HomeScreen extends StatelessWidget {
           return Stack(
             children: [
               Positioned(
-                  top: 350,
+                  top: 320,
                   left: 0,
                   child: Container(
+                    width: MediaQuery.of(context).size.width * 0.75,
+                    height: MediaQuery.of(context).size.height,
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(35)),
                       color: Color(darkGreen),
                     ),
-                    width: MediaQuery.of(context).size.width * 0.75,
-                    height: MediaQuery.of(context).size.height,
                   )),
               Positioned(
-                  top: 260,
+                  top: 240,
                   left: 40,
                   child: SizedBox(
                     width: 200,
@@ -68,8 +68,10 @@ class HomeScreen extends StatelessWidget {
                           padding: EdgeInsets.only(bottom: 0, left: 55),
                           child: Text(
                             'Reptiles',
-                            style:
-                                TextStyle(color: Colors.white70, fontSize: 15),
+                            style: TextStyle(
+                                color: Colors.white70,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700),
                           ),
                         ),
                       ),
@@ -79,8 +81,10 @@ class HomeScreen extends StatelessWidget {
                           padding: EdgeInsets.only(bottom: 0, left: 55),
                           child: Text(
                             'Birds',
-                            style:
-                                TextStyle(color: Colors.white70, fontSize: 15),
+                            style: TextStyle(
+                                color: Colors.white70,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700),
                           ),
                         ),
                       ),
@@ -94,7 +98,9 @@ class HomeScreen extends StatelessWidget {
                               Text(
                                 'Animals',
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 15),
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w700),
                               ),
                               Padding(
                                 padding: EdgeInsets.only(
@@ -115,8 +121,10 @@ class HomeScreen extends StatelessWidget {
                           padding: EdgeInsets.only(bottom: 0, right: 30),
                           child: Text(
                             'Fishes',
-                            style:
-                                TextStyle(color: Colors.white70, fontSize: 15),
+                            style: TextStyle(
+                                color: Colors.white70,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700),
                           ),
                         ),
                       ),
@@ -124,14 +132,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                  top: 200,
-                  left: 0,
-                  child: Container(
-                    width: 270,
-                    height: 60,
-                    color: Color(green),
-                  )),
               Positioned(
                   top: 0,
                   left: 0,
