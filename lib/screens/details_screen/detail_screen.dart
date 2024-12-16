@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/details_screen/details_screen_components/icon_toggle_button.dart';
 import 'package:flutter_application_1/services/animal_service.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -99,18 +100,7 @@ class DetailScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(lightGreen),
-                          foregroundColor: Colors.white,
-                          minimumSize: const Size(40, 70),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20))),
-                      child: const Icon(
-                        Icons.favorite_border,
-                        size: 35,
-                      )),
+                  const IconToggleButton(),
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -120,7 +110,10 @@ class DetailScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20))),
                     child: const Text(
                       "Get started",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700),
                     ),
                   )
                 ],

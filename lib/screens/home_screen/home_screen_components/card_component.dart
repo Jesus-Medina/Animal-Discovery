@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/details_screen/detail_screen.dart';
 import 'package:flutter_application_1/services/animal_service.dart';
+import 'package:audioplayers/audioplayers.dart';
 
-class AnimalCard extends StatelessWidget {
+class AnimalCard extends StatefulWidget {
   final Animal animal;
-  final int green = 0xFF285555;
-  final int darkGreen = 0xFF1f4949;
-  final int orange = 0xFFf67913;
 
   const AnimalCard({super.key, required this.animal});
+
+  @override
+  _AnimalCardState createState() => _AnimalCardState();
+}
+
+class _AnimalCardState extends State<AnimalCard> {
+  final AudioPlayer _audioPlayer = AudioPlayer();
+
+  @override
+  void dispose() {
+    _audioPlayer.dispose();
+    super.dispose();
+  }
+
+  Future<void> _playBirdSound() async {
+    await _audioPlayer.play(AssetSource('sounds/bird_chirp.mp3'));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +34,7 @@ class AnimalCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => DetailScreen(animal: animal),
+              builder: (context) => DetailScreen(animal: widget.animal),
             ),
           );
         },
@@ -32,7 +47,7 @@ class AnimalCard extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(35),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
               ),
@@ -41,18 +56,15 @@ class AnimalCard extends StatelessWidget {
                 bottom: -2,
                 width: 200,
                 height: 200,
-                child: Image.asset(animal.image),
+                child: Image.asset(widget.animal.image),
               ),
               Positioned(
                 left: 30,
                 top: 25,
                 child: SizedBox(
                   child: Text(
-                    animal.title,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                        color: Color(darkGreen)),
+                    widget.animal.title,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ),
               ),
@@ -60,11 +72,13 @@ class AnimalCard extends StatelessWidget {
                 right: -35,
                 bottom: 10,
                 child: ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
+                    await _playBirdSound();
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DetailScreen(animal: animal),
+                        builder: (context) =>
+                            DetailScreen(animal: widget.animal),
                       ),
                     );
                   },
